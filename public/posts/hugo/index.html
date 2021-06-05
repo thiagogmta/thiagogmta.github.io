@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Criando um blog com Hugo e hospedando no github - Thiago Guimarães Tavares </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="" />
+    <meta property="og:site_name" content="Thiago Guimarães Tavares" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://example.com/posts/hugo/" />
+    <meta property="og:title" content="Criando um blog com Hugo e hospedando no github" />
+    <meta property="og:image" content="https://example.com" />
+    <meta property="og:description" content="" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:title" content="Criando um blog com Hugo e hospedando no github" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://example.com" />
+
+    <link rel="canonical" href="https://example.com/posts/hugo/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://example.comcss/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github-gist.min.css" integrity="sha512-od7JLoOTxM8w/HSKGzP9Kexc20K9p/M2zxSWsd7H1e4Ctf+8SQFtCWEZnW5u6ul5ehSECa5QmOk9ju2nQMmlVA==" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://example.com/images/favicon.png">
+
+    
+    <link href="https://example.com/index.xml" rel="alternate" type="application/rss+xml" title="Thiago Guimarães Tavares" />
+    
+</head>
+
+<body>
+    
+    <div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://example.com">
+                    <h1 class="name">Thiago Guimarães Tavares</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <ul class="nav nav-primary">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/nanxstats">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/nanxstats">
+                        
+                        Twitter
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.xml">
+                        
+                        Subscribe
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <h1 class="mx-0 mx-md-4">Criando um blog com Hugo e hospedando no github</h1>
+                    <div class="markdown">
+                        
+    <h2 id="1-instalando-dependências">1. Instalando Dependências</h2>
+<p>Podemos trabalhar com o Hugo Blog em qualquer sistema operacional, basta apenas instalar os pacotes necessários. Para este guia iremos instalar os seguintes aplicativos:</p>
+<ul>
+<li>Gerenciador de Pacotes
+<ul>
+<li>Homebew para Linux</li>
+<li>Chocolatey para Windows</li>
+</ul>
+</li>
+<li>Git
+<ul>
+<li>O Git será nosso sistema de controle de versões. É responsável por iniciar nosso repositório e realizar o controle de versão dos arquivos.</li>
+</ul>
+</li>
+<li>Hugo
+<ul>
+<li>Hogo é um gerador de site. Ele converte nosso artigo escrito em Markdown para paginas html</li>
+</ul>
+</li>
+<li>Typora
+<ul>
+<li>Utilizaremos o Typora como editor de texto simples. O Typora é um editor markdown Distraction Free (livre de distrações)</li>
+</ul>
+</li>
+</ul>
+<p>A seguir você encontra o processo de instalação de ambos os pacotes para os sistemas Linux e Windows. Realize o processo de instalação de acordo com o seu sistema operacional. A partir do tópico 2 deste artigo os passos são os mesmos para qualquer sistema.</p>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>Homebrew e git</li>
+</ul>
+<p>Instalando Git e dependências:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-get install build-essential curl file git
+</code></pre></div><p>Instalando Homebew</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ /bin/bash -c <span style="color:#a31515">&#34;</span><span style="color:#00f">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span style="color:#00f">)</span><span style="color:#a31515">&#34;</span>
+</code></pre></div><p>Realizando configurações:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ test -d ~/.linuxbrew &amp;&amp; eval <span style="color:#00f">$(</span>~/.linuxbrew/bin/brew shellenv<span style="color:#00f">)</span>
+$ test -d /home/linuxbrew/.linuxbrew &amp;&amp; eval <span style="color:#00f">$(</span>/home/linuxbrew/.linuxbrew/bin/brew shellenv<span style="color:#00f">)</span>
+$ test -r ~/.bash_profile &amp;&amp; echo eval<span style="color:#a31515">&#34; (</span><span style="color:#00f">$(</span>brew --prefix<span style="color:#00f">)</span><span style="color:#a31515">/bin/brew shellenv)&#34;</span> &gt;&gt;~/.bash_profile
+$ echo <span style="color:#a31515">&#34;eval </span><span style="color:#00f">$($(</span>brew --prefix<span style="color:#00f">)</span>/bin/brew shellenv<span style="color:#00f">)</span><span style="color:#a31515">&#34;</span> &gt;&gt;~/.profile
+</code></pre></div><ul>
+<li>hugo</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ brew install hugo
+</code></pre></div><h3 id="windows">Windows</h3>
+<ul>
+<li>chocolatey
+<ul>
+<li>Chocolatey é um gerenciador de pacotes para o Windows. Iremos instalar nossas dependências através dele.</li>
+<li>1 - Abra o prompt de comandos (ou powershell) como administrador. Clique com o botão direito no menu iniciar e selecione Windows PowerShell (Admin).</li>
+<li>Cole e execute o comando a seguir:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt; Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#a31515">&#39;https://chocolatey.org/install.ps1&#39;</span>))
+</code></pre></div><p>Com o chocolatey instalado basta instalar os pacotes a seguir através do Prompt de Comandos (ou PowerShell).</p>
+<ul>
+<li>git</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">c:<span style="color:#a31515">\&gt;</span> choco install git
+</code></pre></div><ul>
+<li>hugo</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">c:<span style="color:#a31515">\&gt;</span> choco install hugo -confirm
+</code></pre></div><ul>
+<li>Typora</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">c:<span style="color:#a31515">\&gt;</span> choco install typora
+</code></pre></div><h2 id="2-criando-nosso-blog">2. Criando nosso Blog</h2>
+<p>A seguir seguem os passos para criação do blog seleção do tema e configurações iniciais.</p>
+<h2 id="21-criando-o-blog">2.1. Criando o blog</h2>
+<p>Através do prompt de comandos ou terminal execute:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new site thiagogmta
+</code></pre></div><p>Nesse caso thiagogmta será o nome do diretório onde os arquivos do blog serão instalados. Posteriormente iremos acessar o diretório criado e inicializar o repositório.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd thiagogmta
+$ git init
+</code></pre></div><h3 id="22-selecionando-um-tema">2.2. Selecionando um tema</h3>
+<p>Existem diversos temas disponíveis para serem usados e você pode conferir a lista completa acessando <a href="https://themes.gohugo.io/">Hugo Themes</a>.</p>
+<p>Para este artigo utilizaremos o Tema <a href="https://themes.gohugo.io/hugo-tanka/"><strong>Tanka</strong></a>.</p>
+<p><img src="tanka.png" alt="Tanka"></p>
+<p><strong>Instalação</strong></p>
+<p>O procedimento descrito a seguir é padrão para qualquer tema, entretanto alguns temas podem exigir configurações adicionais que normalmente estão descritas na página do tema.</p>
+<p>Iremos utilizar o git para clonar os arquivos do tema para dentro do diretório <strong>themes</strong> em nosso repositório. Para isso iremos executar:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git submodule add https://github.com/nanxstats/hugo-tanka.git themes/hugo-tanka
+</code></pre></div><p><strong>Configuração</strong></p>
+<p>Dentro do nosso repositório existe um arquivo chamado <em>config.toml</em>. Esse arquivo possui as configurações do nosso projeto. Na pagina do tema existem algumas instruções sobre quais informações devem ser inseridas. Altere o arquivo de forma a se a presentar conforme a baixo:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">baseURL = <span style="color:#a31515">&#34;https://example.com&#34;</span>
+languageCode = <span style="color:#a31515">&#34;pt-br&#34;</span>
+DefaultContentLanguage = <span style="color:#a31515">&#34;pt-br&#34;</span>
+title = <span style="color:#a31515">&#34;Thiago Guimarães Tavares&#34;</span>
+theme = <span style="color:#a31515">&#34;hugo-tanka&#34;</span>
+
+enableEmoji = <span style="color:#00f">true</span>
+pygmentsstyle = <span style="color:#a31515">&#34;vs&#34;</span>
+pygmentscodefences = <span style="color:#00f">true</span>
+
+[params]
+  sitename = <span style="color:#a31515">&#34;Thiago Guimarães Tavares&#34;</span>
+  faviconfile = <span style="color:#a31515">&#34;images/favicon.png&#34;</span>
+  highlightjs = <span style="color:#00f">true</span>
+  highlightjslanguages = [<span style="color:#a31515">&#34;r&#34;</span>, <span style="color:#a31515">&#34;python&#34;</span>, <span style="color:#a31515">&#34;stan&#34;</span>]
+  uselatex = <span style="color:#00f">true</span>
+
+[[menu.primary]]
+    name = <span style="color:#a31515">&#34;Home&#34;</span>
+    url = <span style="color:#a31515">&#34;/&#34;</span>
+    weight = 1
+[[menu.primary]]
+    name = <span style="color:#a31515">&#34;About&#34;</span>
+    url = <span style="color:#a31515">&#34;/about/&#34;</span>
+    weight = 2
+[[menu.primary]]
+    name = <span style="color:#a31515">&#34;GitHub&#34;</span>
+    url = <span style="color:#a31515">&#34;https://github.com/nanxstats&#34;</span>
+    weight = 3
+[[menu.primary]]
+    name = <span style="color:#a31515">&#34;Twitter&#34;</span>
+    url = <span style="color:#a31515">&#34;https://twitter.com/nanxstats&#34;</span>
+    weight = 4
+[[menu.primary]]
+    name = <span style="color:#a31515">&#34;Subscribe&#34;</span>
+    url = <span style="color:#a31515">&#34;/index.xml&#34;</span>
+    weight = 5
+</code></pre></div><h3 id="23-criando-o-primeiro-post">2.3. Criando o primeiro post</h3>
+<p>Dentro do repositório execute o comando:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new primeiropost.md
+</code></pre></div><p>Algumas considerações:</p>
+<ul>
+<li>hugo new post - Comando responsável por criar o post</li>
+<li>primeiropost.md - Nome do arquivo.
+<ul>
+<li>Procure não utilizar espaços</li>
+<li>A extensão deve ser .md</li>
+</ul>
+</li>
+</ul>
+<p>Iremos agora utilizar o Typora para fazer a edição do post criado. Abra o Typora e carregue o arquivo primeiropost.md.</p>
+<ol>
+<li>Arquivo abrir.</li>
+<li>&lt;diretório do repositório&gt;/content/posts/primeiropost.md</li>
+</ol>
+<p>Dentro do arquivo você iremos nos deparar com alguns dados iniciais. Altere as informações conforme a seguir:</p>
+<pre><code>---
+title: &quot;Criando meu Primeiro post&quot;
+date: 2021-06-03T10:26:04-03:00
+draft: false
+---
+
+Este é meu primeiro post utilizanod Hugo Blog!
+
+## Sobre este post
+
+É apenas um post de teste
+</code></pre><blockquote>
+<p>Observação:</p>
+<p>O parâmetro <strong>draft</strong> define se o post irá estar visível ou não.</p>
+<p>draft: false - Post ficará visível</p>
+<p>draft: true - Post não será exibido</p>
+<p>Essa função serve para você definir quais posts devem ser exibidos sem excluir arquivos que você ainda quer manter.</p>
+</blockquote>
+<h2 id="24-testando">2.4. Testando</h2>
+<p>Para testar nosso projeto execute no prompt ou no terminal (na raiz do diretório do projeto):</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo server
+</code></pre></div><p>Você deve receber uma mensagem como a seguir:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Start building sites …
+
+                   | PT-BR
+-------------------+--------
+  Pages            |     7
+  Paginator pages  |     0
+  Non-page files   |     0
+  Static files     |     2
+  Processed images |     0
+  Aliases          |     0
+  Sitemaps         |     1
+  Cleaned          |     0
+
+Built in 20 ms
+Watching <span style="color:#00f">for</span> changes in C:<span style="color:#a31515">\U</span>sers<span style="color:#a31515">\t</span>hiag<span style="color:#a31515">\D</span>ropbox<span style="color:#a31515">\t</span>hiagogmta<span style="color:#a31515">\{</span>archetypes,content,data,layouts,static,themes}
+Watching <span style="color:#00f">for</span> config changes in C:<span style="color:#a31515">\U</span>sers<span style="color:#a31515">\t</span>hiag<span style="color:#a31515">\D</span>ropbox<span style="color:#a31515">\t</span>hiagogmta<span style="color:#a31515">\c</span>onfig.toml
+Environment: <span style="color:#a31515">&#34;development&#34;</span>
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre></div><p>Basta abrir o navegador de internet e digitar: http://localhost:1313.</p>
+<p>Eis o resultado:</p>
+<p><img src="post.png" alt="post"></p>
+<h2 id="3-enviado-os-arquivos-para-o-github">3. Enviado os arquivos para o github</h2>
+<p>Acesse sua conta e crie um repositório conforme: &lt;seu_usuario&gt;.github.io. No meu caso <strong>thiagogmta.github.io</strong>. Observe a seguir:</p>
+<p><img src="repo.png" alt="githubio"></p>
+<p>Ao criar o repositório algumas informações para enviar os arquivos serão apresentadas. Para este caso utilizaremos as instruções a seguir:</p>
+<p><img src="push.png" alt="push"></p>
+<p>Dessa forma abra seu terminal e execute (altere a primeira linha conforme o link do seu repo):</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote add origin https://github.com/thiagogmta/thiagogmta.github.io.git
+$ git branch -M main
+$ git add .
+$ git commit -m <span style="color:#a31515">&#34;Meu primeiro commit&#34;</span>
+$ git push origin main
+</code></pre></div><p>Seu nome de usuário e senha do github serão solicitados. Por fim os arquivos serão enviados ao github.</p>
+<p><strong>Configurando a Integração entre Hugo e Github</strong></p>
+<p>Precisamos criar um arquivo de configuração que intermedia a integração entre Hugo e Github. Crie o arquivo gh-pages.yml dentro do diretório do seu projeto. Neste caso: <strong>/thiagogmta/.github/workflows/gh-pages.yml</strong>.</p>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo=""
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" defer></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" defer></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/stan.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>

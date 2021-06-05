@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thiago Guimarães Tavares</title>
+    <link>https://example.com/</link>
+    <description>Recent content on Thiago Guimarães Tavares</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 03 Jun 2021 13:05:25 -0300</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Primeiropost</title>
+      <link>https://example.com/posts/primeiropost/</link>
+      <pubDate>Thu, 03 Jun 2021 13:05:25 -0300</pubDate>
+      
+      <guid>https://example.com/posts/primeiropost/</guid>
+      <description>Este é meu primeiro post utilizanod Hugo Blog!
+Sobre este post É apenas um post de teste</description>
+    </item>
+    
+    <item>
+      <title>Criando um blog com Hugo e hospedando no github</title>
+      <link>https://example.com/posts/hugo/</link>
+      <pubDate>Thu, 03 Jun 2021 10:26:04 -0300</pubDate>
+      
+      <guid>https://example.com/posts/hugo/</guid>
+      <description>1. Instalando Dependências Podemos trabalhar com o Hugo Blog em qualquer sistema operacional, basta apenas instalar os pacotes necessários. Para este guia iremos instalar os seguintes aplicativos:
+ Gerenciador de Pacotes  Homebew para Linux Chocolatey para Windows   Git  O Git será nosso sistema de controle de versões. É responsável por iniciar nosso repositório e realizar o controle de versão dos arquivos.   Hugo  Hogo é um gerador de site.</description>
+    </item>
+    
+  </channel>
+</rss>

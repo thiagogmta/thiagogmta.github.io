@@ -1,0 +1,37 @@
+baseURL = "https://example.com"
+languageCode = "pt-br"
+DefaultContentLanguage = "pt-br"
+title = "Thiago Guimarães Tavares"
+theme = "hugo-tanka"
+
+enableEmoji = true
+pygmentsstyle = "vs"
+pygmentscodefences = true
+
+[params]
+  sitename = "Thiago Guimarães Tavares"
+  faviconfile = "images/favicon.png"
+  highlightjs = true
+  highlightjslanguages = ["r", "python", "stan"]
+  uselatex = true
+
+[[menu.primary]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.primary]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[menu.primary]]
+    name = "GitHub"
+    url = "https://github.com/nanxstats"
+    weight = 3
+[[menu.primary]]
+    name = "Twitter"
+    url = "https://twitter.com/nanxstats"
+    weight = 4
+[[menu.primary]]
+    name = "Subscribe"
+    url = "/index.xml"
+    weight = 5
