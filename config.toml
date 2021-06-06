@@ -2,36 +2,52 @@ baseURL = "https://example.com"
 languageCode = "pt-br"
 DefaultContentLanguage = "pt-br"
 title = "Thiago Guimarães Tavares"
-theme = "ink"
+theme = "anatole"
 
 enableEmoji = true
 pygmentsstyle = "vs"
 pygmentscodefences = true
 
 [params]
-  sitename = "Thiago Guimarães Tavares"
-  faviconfile = "images/favicon.png"
-  highlightjs = true
-  highlightjslanguages = ["r", "python", "stan"]
-  uselatex = true
+  title = "Thiago Guimarães Tavares"
+  author = "thiagogmta"
+  description = "💻 | Bora #aprender sobre #tecnologia?"
+  profilePicture = "images/profile.png"
+  displayMode = "light"
 
-[[menu.primary]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.primary]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.primary]]
-    name = "GitHub"
-    url = "https://github.com/nanxstats"
-    weight = 3
-[[menu.primary]]
-    name = "Twitter"
-    url = "https://twitter.com/nanxstats"
-    weight = 4
-[[menu.primary]]
-    name = "Subscribe"
-    url = "/index.xml"
-    weight = 5
+[[params.socialIcons]]
+  icon = "fab fa-linkedin"
+  title = "Linkedin"
+  url = "https://de.linkedin.com/"
+[[params.socialIcons]]
+  icon = "fab fa-github"
+  title = "GitHub"
+  url = "https://de.linkedin.com/"
+[[params.socialIcons]]
+  icon = "fab fa-instagram"
+  title = "Instagram"
+  url = "https://de.linkedin.com/"    
+[[params.socialIcons]]
+  icon = "fas fa-envelope"
+  title = "E-mail"
+  url = "https://de.linkedin.com/" 
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 200
+  identifier = "posts"
+  url = "/posts/"
+
+  [[menu.main]]
+  name = "Quem Sou"
+  weight = 300
+  identifier = "about"
+  url = "posts/about/"
