@@ -6,15 +6,30 @@
     <description>Recent content on Thiago Guimarães Tavares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 03 Jun 2021 13:05:25 -0300</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Jun 2021 22:08:03 -0300</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quem Sou</title>
+      <link>https://example.com/posts/about/</link>
+      <pubDate>Sat, 05 Jun 2021 22:08:03 -0300</pubDate>
+      
+      <guid>https://example.com/posts/about/</guid>
+      
+        <description>Hi, I&amp;rsquo;m Thiago Guimarães Tavares I&amp;rsquo;m working at IFTO - Campus Palmas, born in Porto Nacional and living in Palmas - TO.
+You can check my social accounts  🌎 Site 🐦 Twitter 📸 Instagram 💼 LinkedIn  Here are some ideas to get you started:
+ 🔭 I’m currently working on My5G Core 🌱 I’m currently learning about DevOps (Docker, Ansible, Vagrant, Kubernetes) 👯 I’m looking to collaborate on My5G Core  </description>
+      
+    </item>
+    
     <item>
       <title>Primeiropost</title>
       <link>https://example.com/posts/primeiropost/</link>
       <pubDate>Thu, 03 Jun 2021 13:05:25 -0300</pubDate>
       
       <guid>https://example.com/posts/primeiropost/</guid>
-      <description>Este é meu primeiro post utilizanod Hugo Blog!
+      
+        <description>Este é meu primeiro post utilizanod Hugo Blog!
 Sobre este post É apenas um post de teste</description>
+      
     </item>
     
     <item>
@@ -23,8 +38,10 @@ Sobre este post É apenas um post de teste</description>
       <pubDate>Thu, 03 Jun 2021 10:26:04 -0300</pubDate>
       
       <guid>https://example.com/posts/hugo/</guid>
-      <description>1. Instalando Dependências Podemos trabalhar com o Hugo Blog em qualquer sistema operacional, basta apenas instalar os pacotes necessários. Para este guia iremos instalar os seguintes aplicativos:
+      
+        <description>1. Instalando Dependências Podemos trabalhar com o Hugo Blog em qualquer sistema operacional, basta apenas instalar os pacotes necessários. Para este guia iremos instalar os seguintes aplicativos:
  Gerenciador de Pacotes  Homebew para Linux Chocolatey para Windows   Git  O Git será nosso sistema de controle de versões. É responsável por iniciar nosso repositório e realizar o controle de versão dos arquivos.   Hugo  Hogo é um gerador de site.</description>
+      
     </item>
     
   </channel>
