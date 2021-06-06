@@ -2,7 +2,7 @@ baseURL = "https://example.com"
 languageCode = "pt-br"
 DefaultContentLanguage = "pt-br"
 title = "Thiago Guimarães Tavares"
-theme = "hugo-tanka"
+theme = "ink"
 
 enableEmoji = true
 pygmentsstyle = "vs"
