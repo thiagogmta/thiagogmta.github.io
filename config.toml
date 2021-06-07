@@ -9,8 +9,7 @@ theme = "anatole"
   author = "thiagogmta"
   description = "💻 | Bora #aprender sobre #tecnologia?"
   profilePicture = "images/profile.png"
-  displayMode = "light"
-  contentratio = 0.7
+  contentratio = 0.68
   readMore = true
 
 
@@ -49,4 +48,4 @@ theme = "anatole"
   name = "Quem Sou"
   weight = 300
   identifier = "about"
-  url = "posts/about/"
+  url = "/posts/about/"

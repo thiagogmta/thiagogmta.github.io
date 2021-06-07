@@ -4,6 +4,9 @@ date: 2021-06-03T10:26:04-03:00
 draft: false
 ---
 
+![hugo](hugo.jpg)
+
+
 ## 1. Instalando Dependências
 
 Podemos trabalhar com o Hugo Blog em qualquer sistema operacional, basta apenas instalar os pacotes necessários. Para este guia iremos instalar os seguintes aplicativos:
