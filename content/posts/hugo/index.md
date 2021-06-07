@@ -187,7 +187,7 @@ Iremos agora utilizar o Typora para fazer a edição do post criado. Abra o Typo
 
 Dentro do arquivo você iremos nos deparar com alguns dados iniciais. Altere as informações conforme a seguir:
 
-```
+```md
 ---
 title: "Criando meu Primeiro post"
 date: 2021-06-03T10:26:04-03:00
@@ -277,3 +277,41 @@ Seu nome de usuário e senha do github serão solicitados. Por fim os arquivos s
 
 Precisamos criar um arquivo de configuração que intermedia a integração entre Hugo e Github. Crie o arquivo gh-pages.yml dentro do diretório do seu projeto. Neste caso: **/thiagogmta/.github/workflows/gh-pages.yml**. 
 
+## Hospedando no Neflify
+
+### Criando o arquivo netlify.toml
+
+No site oficial do Netlify recebemos orientações sobre como configurar a integração entre Hugo e netlify para realização do deploy do site. O Netlify nos orienta que deve ser criado um arquivo de configuração e você pode verificar essas informações clicando [aqui](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/). Devemos criar um arquivo chamado netlify.toml na raiz do diretório do nosso projeto e inserir o seguinte conteúdo:
+
+```toml
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.83.1"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+command = "hugo --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+HUGO_VERSION = "0.83.1"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.83.1"
+
+[context.branch-deploy]
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.83.1"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+```

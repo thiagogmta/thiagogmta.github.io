@@ -1,12 +1,8 @@
-baseURL = "https://example.com"
+baseURL = "https://thiagogmta.netlify.app/"
 languageCode = "pt-br"
 DefaultContentLanguage = "pt-br"
 title = "Thiago Guimarães Tavares"
 theme = "anatole"
-
-enableEmoji = true
-pygmentsstyle = "vs"
-pygmentscodefences = true
 
 [params]
   title = "Thiago Guimarães Tavares"
@@ -14,6 +10,9 @@ pygmentscodefences = true
   description = "💻 | Bora #aprender sobre #tecnologia?"
   profilePicture = "images/profile.png"
   displayMode = "light"
+  contentratio = 0.7
+  readMore = true
+
 
 [[params.socialIcons]]
   icon = "fab fa-linkedin"
